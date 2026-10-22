@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#140f1c">
+  <meta name="description" content="Responda ao quiz de Halloween e descubra qual poção combina com você.">
+  <title>O Caldeirão da Meia-Noite — Quiz de Halloween</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="moon-glow" aria-hidden="true"></div>
+  <div class="bat bat-one" aria-hidden="true">✦</div>
+  <div class="bat bat-two" aria-hidden="true">✦</div>
+  <main class="page">
+    <header class="masthead">
+      <a class="brand" href="#top" aria-label="O Caldeirão da Meia-Noite, início">
+        <span class="brand-icon" aria-hidden="true">☠</span>
+        <span>O Caldeirão<br><b>da Meia-Noite</b></span>
+      </a>
+      <div class="edition"><span aria-hidden="true">✧</span> Especial de Halloween <span aria-hidden="true">✧</span></div>
+    </header>
+
+    <section class="hero" id="top" aria-labelledby="mainTitle">
+      <div class="hero-copy">
+        <div class="eyebrow"><span aria-hidden="true">☽</span> O grimório está aberto <span aria-hidden="true">☾</span></div>
+        <h1 id="mainTitle">Qual poção<br>vai <em>despertar</em><br>na sua noite?</h1>
+        <p class="intro">A lua está alta, o caldeirão borbulha e uma receita espera por você. Responda às perguntas e descubra a poção que combina com seu lado misterioso.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#quiz">Entrar no caldeirão <span aria-hidden="true">↘</span></a>
+          <span class="hero-note">10 presságios · 1 poção revelada</span>
+        </div>
+        <div class="halloween-stamps" aria-label="Halloween">
+          <span>☠</span><span>✦</span><span>♧</span><span>✦</span><span>☾</span>
+        </div>
+      </div>
+      <figure class="art-frame">
+        <span class="corner corner-a" aria-hidden="true">✧</span><span class="corner corner-b" aria-hidden="true">✧</span>
+        <img src="cartela.png" alt="Dez rótulos vintage de poções de Halloween: esquecimento, amor, invisibilidade, coragem, sono, sorte, medo, energia, riso e memória" fetchpriority="high">
+        <figcaption>Dez frascos · dez destinos · nenhum para beber</figcaption>
+      </figure>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"><span>✧</span><i></i><span>☽</span><i></i><span>✧</span></div>
+
+    <section class="quiz-card" id="quiz" aria-labelledby="quizHeading">
+      <div class="quiz-heading">
+        <div>
+          <div class="eyebrow">Responda antes da meia-noite</div>
+          <h2 id="quizHeading">O caldeirão quer saber...</h2>
+        </div>
+        <div class="counter" id="counter" aria-live="polite">01 <span>/ 10</span></div>
+      </div>
+      <div class="progress-track" role="progressbar" aria-label="Progresso do questionário" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0"><span id="progressBar"></span></div>
+      <div id="quizContent" aria-live="polite">
+        <h3 id="questionTitle"></h3>
+        <div class="answers" id="answers"></div>
+        <div class="quiz-controls">
+          <button class="button button-ghost" id="backButton" type="button">← Voltar</button>
+          <button class="button button-primary" id="nextButton" type="button" disabled>Próxima pergunta <span aria-hidden="true">→</span></button>
+        </div>
+      </div>
+      <p class="privacy-note"><span aria-hidden="true">☽</span> Suas respostas ficam neste navegador e não são enviadas a nenhum servidor.</p>
+      <section class="result" id="result" aria-labelledby="resultTitle" aria-live="polite"></section>
+    </section>
+
+    <footer>
+      <span>☠ Uma brincadeira de Halloween para mentes curiosas.</span>
+      <span>Poções cenográficas · Não ingerir</span>
+    </footer>
+  </main>
+</body>
+</html>
